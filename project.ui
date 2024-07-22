@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>29934_POC</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="original_image">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Original Image</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="edited_image">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Edited Image</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionWgraj"/>
+   </widget>
+   <widget class="QMenu" name="menuLab1">
+    <property name="title">
+     <string>Lab1</string>
+    </property>
+    <addaction name="actionRectangles"/>
+   </widget>
+   <widget class="QMenu" name="menuLab2">
+    <property name="title">
+     <string>Konwertowanie</string>
+    </property>
+    <addaction name="actionHSV"/>
+    <addaction name="actionYUV"/>
+    <addaction name="actionSzary"/>
+    <addaction name="actionHistogram"/>
+   </widget>
+   <widget class="QMenu" name="menuLab3">
+    <property name="title">
+     <string>Binaryzacja</string>
+    </property>
+    <addaction name="actionBinaryzacja"/>
+    <addaction name="actionHistogram_2"/>
+   </widget>
+   <widget class="QMenu" name="menuLab4">
+    <property name="title">
+     <string>Lab4</string>
+    </property>
+    <addaction name="actionOdejmowanie_obrazu"/>
+    <addaction name="actionKraw_d_pionowa"/>
+    <addaction name="actionKraw_d_pozioma"/>
+    <addaction name="actionKraw_d_uko_na"/>
+   </widget>
+   <widget class="QMenu" name="menuFiltracja">
+    <property name="title">
+     <string>Filtracja</string>
+    </property>
+    <addaction name="actionLiniowa_dolna"/>
+    <addaction name="actionLiniowa_gorna"/>
+    <addaction name="actionLiniwa_z_duplikacj"/>
+    <addaction name="separator"/>
+    <addaction name="actionKrawedzie"/>
+    <addaction name="actionKrawedzie_pionowe"/>
+    <addaction name="actionKrawedzie_ukosne"/>
+    <addaction name="separator"/>
+    <addaction name="actionNieliniowa_min"/>
+    <addaction name="actionNieliniowa_max"/>
+    <addaction name="actionNeiliniowa_mediana"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuLab1"/>
+   <addaction name="menuLab2"/>
+   <addaction name="menuLab3"/>
+   <addaction name="menuLab4"/>
+   <addaction name="menuFiltracja"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHSV">
+   <property name="text">
+    <string>HSV</string>
+   </property>
+  </action>
+  <action name="actionYUV">
+   <property name="text">
+    <string>YUV</string>
+   </property>
+  </action>
+  <action name="actionSzary">
+   <property name="text">
+    <string>Shary</string>
+   </property>
+  </action>
+  <action name="actionBinaryzacja">
+   <property name="text">
+    <string>Próg statyczny</string>
+   </property>
+  </action>
+  <action name="actionOdejmowanie_obrazu">
+   <property name="text">
+    <string>Odejmowanie obrazu</string>
+   </property>
+  </action>
+  <action name="actionKraw_d_pionowa">
+   <property name="text">
+    <string>Krawędź pionowa</string>
+   </property>
+  </action>
+  <action name="actionKraw_d_pozioma">
+   <property name="text">
+    <string>Krawędź pozioma</string>
+   </property>
+  </action>
+  <action name="actionKraw_d_uko_na">
+   <property name="text">
+    <string>Krawędź ukośna</string>
+   </property>
+  </action>
+  <action name="actionLiniowa_dolna">
+   <property name="text">
+    <string>Liniowa dolna</string>
+   </property>
+  </action>
+  <action name="actionLiniowa_gorna">
+   <property name="text">
+    <string>Liniowa górna</string>
+   </property>
+  </action>
+  <action name="actionKrawedzie">
+   <property name="text">
+    <string>Krawędzie poziome</string>
+   </property>
+  </action>
+  <action name="actionLiniwa_z_duplikacj">
+   <property name="text">
+    <string>Liniowa z duplikacją</string>
+   </property>
+  </action>
+  <action name="actionNieliniowa_min">
+   <property name="text">
+    <string>Nieliniowa min</string>
+   </property>
+  </action>
+  <action name="actionNieliniowa_max">
+   <property name="text">
+    <string>Nieliniowa max</string>
+   </property>
+  </action>
+  <action name="actionNeiliniowa_mediana">
+   <property name="text">
+    <string>Neiliniowa mediana</string>
+   </property>
+  </action>
+  <action name="actionHistogram_2">
+   <property name="text">
+    <string>Próg z histogramu</string>
+   </property>
+  </action>
+  <action name="actionWgraj_zdj_cie">
+   <property name="text">
+    <string>Wgraj zdjęcie</string>
+   </property>
+  </action>
+  <action name="actionWgraj">
+   <property name="text">
+    <string>Wgraj</string>
+   </property>
+  </action>
+  <action name="actionProstok_t">
+   <property name="text">
+    <string>Prostokąt</string>
+   </property>
+  </action>
+  <action name="actionRectangles">
+   <property name="text">
+    <string>Rectangles</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>Histogram</string>
+   </property>
+  </action>
+  <action name="actionKrawedzie_pionowe">
+   <property name="text">
+    <string>Krawędzie pionowe</string>
+   </property>
+  </action>
+  <action name="actionKrawedzie_ukosne">
+   <property name="text">
+    <string>Krawędzie ukośne</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
